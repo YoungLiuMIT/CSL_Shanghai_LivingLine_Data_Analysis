@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script>
+</head>
+<body>
+<canvas id="canvas"></canvas>
+<script>
+        var ctx = document.getElementById("canvas").getContext('2d');
+        var lineChartData = {
+            // x轴的标示
+            labels : ['<20m','20m-1h','1h-2h','2h-3h','3h-4h','4h-5h','5h-6h','6h-7h','7h-8h','8h-9h',
+            '9h-10h', '10h-11h', '11h-12h', '12h-13h', '13h-14h', '14h-15h', '15h-16h', '16h-17h',
+            '17h-18h', '18h-19h', '19h-20h', '20h-21h', '21h-22h', '22h-23h', '23h-24h'],
+            // 数据，数组中的每一个object代表一条线
+            datasets : [
+                {
+                    label: "amount",
+                    type:'bar',
+                    backgroundColor:'navy',
+                    data : [0, 6823, 3378, 2020, 1417, 1162, 910, 701, 634, 510, 377, 329, 287, 194,
+                        171, 124, 89, 66, 35, 38, 22, 32, 33, 30, 57]
+                }
+            ]
+        }
+
+        var myMixedChart = new Chart(ctx, {
+            type: 'bar',
+            data: lineChartData,
+            //options: Chart.defaults.line.spanGaps = true,
+            options: Chart.defaults.global.defaultFontColor = 'blue',
+            options: {
+                responsive: true,
+                title: {
+                    display: true,
+                    text: 'How long do they stay in one stay-point (Total 19440 stay-points in July 28th)'
+                },
+                elements:{
+                    point:{
+                        pointStyle: 'dash'
+                    }
+                },
+                tooltips: {
+                    mode: 'index',
+                    intersect: false,
+                },
+                hover: {
+                    mode: 'nearest',
+                    intersect: true
+                }
+            }
+        });
+</script>
+</body>
+</html>

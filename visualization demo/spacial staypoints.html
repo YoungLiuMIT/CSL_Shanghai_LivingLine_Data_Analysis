@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="jquery-3.3.1.min.js"></script>
+    <script src="http://d3js.org/d3.v3.min.js"></script>
+</head>
+<body>
+<input id="period" type="text" />
+<button onclick="refresh()">Refresh</button>
+<button onclick="showAll()">Show All</button>
+
+<script>
+    timePoints = [1532736000000, 1532739600000, 1532743200000, 1532746800000,
+        1532750400000, 1532754000000, 1532757600000, 1532761200000, 1532764800000,
+        1532768400000, 1532772000000, 1532775600000, 1532779200000, 1532782800000,
+        1532786400000, 1532790000000, 1532793600000, 1532797200000, 1532800800000,
+        1532804400000, 1532808000000, 1532811600000, 1532815200000, 1532818800000, 1532822400000];
+    pointList = new Array();
+    probList = new Array();
+    $.ajax({
+        type:"get",
+        async:false,
+        url:"./probXY.json",
+        dataType:"json",
+        success:function(res){
+            probList = res;
+        },
+        error:function(res){
+            console.log("A Something wrong!")
+        }
+    });
+    $.ajax({
+        type:"get",
+        async:false,
+        url:"./0728_staypoint.json",
+        dataType:"json",
+        success:function(res){
+            pointList = res;
+        },
+        error:function(res){
+            console.log("A Something wrong!")
+        }
+    });
+
+    // Set the dimensions of the canvas / graph
+    var margin = {top: 50, right: 50, bottom: 50, left: 100},
+        width = 1200 - margin.left - margin.right,
+        height = 600 - margin.top - margin.bottom;
+
+    // Set the ranges
+    var x = d3.scale.linear().range([0, width]);
+    var y = d3.scale.linear().range([height, 0]);
+
+    // Define the axes
+    var xAxis = d3.svg.axis().scale(x)
+        .orient("bottom").ticks(10);
+
+    var yAxis = d3.svg.axis().scale(y)
+        .orient("left").ticks(10);
+
+
+    // Adds the svg canvas
+    var svg = d3.select("body")
+        .append("svg")
+        .attr("width", width + margin.left + margin.right)
+        .attr("height", height + margin.top + margin.bottom)
+        .append("g")
+        .attr("transform",
+            "translate(" + margin.left + "," + margin.top + ")");
+
+    // Get the data
+    d3.json("./probXY.json", function(error, data) {
+
+        // Scale the range of the data
+        x.domain([40000, 300000]);
+        y.domain([150000, 100000]);
+
+        // Add the scatterplot
+        var dot = svg.selectAll("dot")
+            .data(data)
+            .enter().append("circle")
+            .attr('r',35)
+            .attr("cx", function(d) { return x(d.r_X); })
+            .attr("opacity", 0.2)
+            .attr("fill", "blue")
+            .attr("cy", function(d) { return y(d.r_Y); });
+
+        var svg_texts = svg.selectAll('text')
+            .data(data)
+            .enter()
+            .append('text')
+            .style('fill', 'black')
+            .attr('dx', 0)
+            .attr('dy', 0)
+            .attr("x", function(d) { return x(d.r_X); })
+            .attr("y", function(d) { return y(d.r_Y); })
+            .attr('text-anchor', 'middle')
+            .attr('font-size', 8)
+            .text(function (d) {
+                return d.apmac_number;
+            });
+
+        // Add the X Axis
+        svg.append("g")
+            .attr("class", "x axis")
+            .attr("transform", "translate(0," + height + ")")
+            .call(xAxis);
+
+        // Add the Y Axis
+        svg.append("g")
+            .attr("class", "y axis")
+            .call(yAxis);
+
+    });
+
+    function refresh() {
+        var newList = new Array();
+        var timePeriod = parseInt(document.getElementById('period').value);
+        console.log(timePeriod);
+        for (var i=0; i<pointList.length; i++) {
+            for (var j=0; j<pointList[i].stays.length; j++){
+                if(pointList[i].stays[j].start < timePoints[timePeriod+1] && pointList[i].stays[j].end > timePoints[timePeriod])
+                    newList.push(pointList[i].stays[j]);
+            }
+        }
+        console.log(j);
+        svg.selectAll('rect').remove();
+        var point = svg.selectAll('point')
+            .data(newList)
+            .enter().append("rect")
+            .attr("width", 5)
+            .attr("height", 5)
+            .attr("x", function(d) { return x(d.p[0]); })
+            .attr("opacity", 0.6)
+            .attr("fill", "navy")
+            .attr("y", function(d) { return y(d.p[1]); });
+    }
+    function showAll() {
+        var newList = new Array();
+        for (var i=0; i<pointList.length; i++) {
+            for (var j=0; j<pointList[i].stays.length; j++){
+                newList.push(pointList[i].stays[j]);
+            }
+        }
+        svg.selectAll('rect').remove();
+        var point = svg.selectAll('point')
+            .data(newList)
+            .enter().append("rect")
+            .attr("width", 5)
+            .attr("height", 5)
+            .attr("x", function(d) { return x(d.p[0]); })
+            .attr("opacity", 0.6)
+            .attr("fill", "navy")
+            .attr("y", function(d) { return y(d.p[1]); });
+    }
+</script>
+</body>
+</html>
