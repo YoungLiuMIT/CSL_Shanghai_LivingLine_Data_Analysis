@@ -1,0 +1,164 @@
+[
+  {
+    "apmac_number": 2,
+    "apmac_list": "e4956e418d6a",
+    "r_X": 275893,
+    "r_Y": 131969
+  },
+  {
+    "apmac_number": 25,
+    "apmac_list": "e4956e440307",
+    "r_X": 55954,
+    "r_Y": 134314
+  },
+  {
+    "apmac_number": 24,
+    "apmac_list": "e4956e4402c4",
+    "r_X": 65940,
+    "r_Y": 133825
+  },
+  {
+    "apmac_number": 20,
+    "apmac_list": "e4956e4402d6",
+    "r_X": 105911,
+    "r_Y": 134702
+  },
+  {
+    "apmac_number": 18,
+    "apmac_list": "e4956e418da7",
+    "r_X": 125233,
+    "r_Y": 146305
+  },
+  {
+    "apmac_number": 17,
+    "apmac_list": "e4956e418d99",
+    "r_X": 128233,
+    "r_Y": 133065
+  },
+  {
+    "apmac_number": 15,
+    "apmac_list": "e4956e418d97",
+    "r_X": 145924,
+    "r_Y": 132086
+  },
+  {
+    "apmac_number": 14,
+    "apmac_list": "e4956e418d52",
+    "r_X": 155925,
+    "r_Y": 131655
+  },
+  {
+    "apmac_number": 13,
+    "apmac_list": "e4956e418d7c",
+    "r_X": 165911,
+    "r_Y": 131311
+  },
+  {
+    "apmac_number": 12,
+    "apmac_list": "e4956e418d65",
+    "r_X": 178318,
+    "r_Y": 133363
+  },
+  {
+    "apmac_number": 11,
+    "apmac_list": "e4956e418d86",
+    "r_X": 185870,
+    "r_Y": 130785
+  },
+  {
+    "apmac_number": 10,
+    "apmac_list": "e4956e418d9b",
+    "r_X": 195866,
+    "r_Y": 130916
+  },
+  {
+    "apmac_number": 9,
+    "apmac_list": "e4956e418d7e",
+    "r_X": 201595,
+    "r_Y": 133357
+  },
+  {
+    "apmac_number": 7,
+    "apmac_list": "e4956e418dda",
+    "r_X": 225902,
+    "r_Y": 132612
+  },
+  {
+    "apmac_number": 6,
+    "apmac_list": "e4956e418d92",
+    "r_X": 235896,
+    "r_Y": 132371
+  },
+  {
+    "apmac_number": 5,
+    "apmac_list": "e4956e418ddd",
+    "r_X": 243439,
+    "r_Y": 136923
+  },
+  {
+    "apmac_number": 4,
+    "apmac_list": "e4956e418ddc",
+    "r_X": 255799,
+    "r_Y": 136482
+  },
+  {
+    "apmac_number": 3,
+    "apmac_list": "e4956e418d55",
+    "r_X": 265934,
+    "r_Y": 136299
+  },
+  {
+    "apmac_number": "outdoor-exit",
+    "apmac_list": "0003b9b11b68",
+    "r_X": 283414,
+    "r_Y": 114816
+  },
+  {
+    "apmac_number": 19,
+    "apmac_list": "e4956e418df7",
+    "r_X": 115687,
+    "r_Y": 134356
+  },
+  {
+    "apmac_number": 23,
+    "apmac_list": "e4956e4402f2",
+    "r_X": 75924,
+    "r_Y": 133311
+  },
+  {
+    "apmac_number": 22,
+    "apmac_list": "e4956e4402be",
+    "r_X": 85926,
+    "r_Y": 133467
+  },
+  {
+    "apmac_number": 21,
+    "apmac_list": "e4956e4402c9",
+    "r_X": 95921,
+    "r_Y": 135089
+  },
+  {
+    "apmac_number": "OUT-2-extrance",
+    "apmac_list": "0003b9b11b5c",
+    "r_X": 44867,
+    "r_Y": 131748
+  },
+  {
+    "apmac_number": 8,
+    "apmac_list": "e4956e418d4c",
+    "r_X": 215902,
+    "r_Y": 133226
+  },
+  {
+    "apmac_number": 16,
+    "apmac_list": "e4956e418d9e",
+    "r_X": 135916,
+    "r_Y": 132327
+  },
+  {
+    "apmac_number": 1,
+    "apmac_list": "e4956e418d91",
+    "r_X": 285147,
+    "r_Y": 131648
+  }
+]
