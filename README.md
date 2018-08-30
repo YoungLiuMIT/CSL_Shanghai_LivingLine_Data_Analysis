@@ -2,14 +2,19 @@
 
 The codes of visualization part are all in visualization demo, but some can not be send because the data need to be secret
 
-## Introduction of each file
-City Science Lab Shanghai - LivingLine Project - Data Analysis  
+## Introduction of each Python file 
+City Science Lab Shanghai - LivingLine Project - Data Analysis
+
+### Wi-Fi AP connection-oriented data analysis
 0812_second version for processing stay point (combine 1 day)  
 cleanData to csv for processing clean data to a csv file  
-exploreWifiLL for comparing the raw data with the clean data to get the valid macs  
-individual xy coordinates for getting the staypoints  
 toJSON for processing raw data to a json file  
-to_graph_csv for getting 10 minutes data to visualize  
+
+### User Device-oriented data analysis
+exploreWifiLL for comparing the raw data with the clean data to get the valid macs and the individual connection records in one peoriod
+individual xy coordinates for getting the staypoints  
+to_graph_csv for getting 10 minutes data to visualize
+0824 interval tree.py for using Interval Tree and Hyperbola to define the accurate location of each individual 
 
 ## Rhino Grasshopper Visualization
 
