@@ -16,6 +16,9 @@ individual xy coordinates for getting the staypoints
 to_graph_csv for getting 10 minutes data to visualize
 0824 interval tree.py for using Interval Tree and Hyperbola to define the accurate location of each individual 
 
+### Check the time of data
+Day time check for clean data is to transform the data of one day(6 files) into a matrix(24*60) to check the 1440 minutes of each day, so that we can see we lost the data of which time period. 
+
 ## Rhino Grasshopper Visualization
 
 All Rhino Grasshopper source code is under "RH_GH" folder. 
@@ -46,3 +49,6 @@ https://drive.google.com/open?id=1sQlhtg6_sgunRxopRwKr_Z6bs-CokCo5
 data used (processed anonymous data, team access only)  
 shared gdrive folder: LivingLine Data\Wi-Fi Data\Data Sample\180812_csv for viz_Weiting\max24094_freq_0728vis.csv  
 
+## visualization demo
+timestay.html visualized the amount of the staypoints divided by how long do they last. 
+spacial staypoints.html visualized the spacial of the stay-points in each time period, but it is not workable now because the spacial data of the staypoints is not correct enough. However, I still upload the staypoints data on drive: https://drive.google.com/open?id=1miPacbr410zlpAgCXtwoUa8G1Bbv5kt_, with this you can run the html code(put them in a same folder)
