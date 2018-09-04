@@ -46,3 +46,6 @@ https://drive.google.com/open?id=1sQlhtg6_sgunRxopRwKr_Z6bs-CokCo5
 data used (processed anonymous data, team access only)  
 shared gdrive folder: LivingLine Data\Wi-Fi Data\Data Sample\180812_csv for viz_Weiting\max24094_freq_0728vis.csv  
 
+## visualization demo
+timestay.html visualized the amount of the staypoints divided by how long do they last. 
+spacial staypoints.html visualized the spacial of the stay-points in each time period, but it is not workable now because the spacial data of the staypoints is not correct enough. However, I still upload the staypoints data on drive: https://drive.google.com/open?id=1miPacbr410zlpAgCXtwoUa8G1Bbv5kt_, with this you can run the html code(put them in a same folder)
