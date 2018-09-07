@@ -14,7 +14,7 @@ toJSON for processing raw data to a json file
 exploreWifiLL for comparing the raw data with the clean data to get the valid macs and the individual connection records in one peoriod
 individual xy coordinates for getting the staypoints  
 to_graph_csv for getting 10 minutes data to visualize
-0824 interval tree.py for using Interval Tree and Hyperbola to define the accurate location of each individual 
+0824 interval tree.py and 0906_individual_xy coordinates.py  for using Interval Tree and Hyperbola to define the accurate location of each individual 
 
 ## Rhino Grasshopper Visualization
 
