@@ -90,9 +90,19 @@ apmac_info.columns = ['apmac_number','AP','r_coordinate X','r_coordinate Y']
 #                  ind_ind_1[2]['AP_XY'].append(xy[0])    
 #    print(node_1)
 
-for agent in allTrees:
-    for interval in 
-    
+ap2Xy={ap: apmac_info.loc[apmac_info['AP']==ap][['r_coordinate X', 'r_coordinate Y']].values[0] for ap in apmac_info['AP'].values}
+#agentList=[list(allTrees.items())[a][0] for a in range(1000)]
+agentList=list(allTrees.keys())
+for agent in agentList[:1000]:
+    for interval in allTrees[agent]:
+        apList=interval[2]['AP'].split(',')
+        for ap in apList:
+            try:
+                apXY=ap2Xy[ap]
+            except:
+                apXY=[float('nan'), float('nan')]
+            # TODO: save apXY wherever you want
+            
     
 ## we divide all the records into three categories: 
     ### connection_once is the record connected to one device at the certain interval in which situation we define the location of the individual to be the foot point from the device to the road center axis
