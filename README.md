@@ -16,6 +16,13 @@ individual xy coordinates for getting the staypoints
 to_graph_csv for getting 10 minutes data to visualize
 0824 interval tree.py and 0906_individual_xy coordinates.py  for using Interval Tree and Hyperbola to define the accurate location of each individual 
 
+## Camera Data Analysis
+All source codes about camera data analysis is under "Camera Data Analysis" folder.
+
+### preprocessing of the camera data from Shanghai Summit
+extract pictures from video .ipynb is the script for extracting pictures from a video, here we extract two pictures for each second.
+
+
 ## Rhino Grasshopper Visualization
 
 All Rhino Grasshopper source code is under "RH_GH" folder. 
